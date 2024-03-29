@@ -1,9 +1,8 @@
-import 'dart:io';
-
 import 'package:flutter/material.dart';
 
 import 'dart:js' as js;
 import 'package:carousel_slider/carousel_slider.dart';
+
 import 'package:url_launcher/url_launcher.dart';
 import 'package:vts/constants/colors.dart';
 import 'package:vts/pages/mobile/appbar.dart';
@@ -309,6 +308,7 @@ class _MobileHomeScreenState extends State<MobileHomeScreen> {
                         'The fields of interest of the Society are the theoretical, experimental and operational aspects of electrical and electronics engineering in mobile radio, motor vehicles and land transportation.',
                         style: TextStyle(fontSize: 16.0),
                       ),
+                      // Test
                       SizedBox(height: 16.0),
                       Card(
                         elevation: 2.0,
@@ -412,8 +412,6 @@ class _MobileHomeScreenState extends State<MobileHomeScreen> {
           ),
         ),
       ),
-<<<<<<< HEAD
-=======
       bottomNavigationBar: Container(
         padding: EdgeInsets.symmetric(
           vertical: 8.0,
@@ -463,7 +461,6 @@ class _MobileHomeScreenState extends State<MobileHomeScreen> {
           ],
         ),
       ),
->>>>>>> refs/remotes/origin/main
     );
   }
 }
