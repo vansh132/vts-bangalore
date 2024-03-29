@@ -288,11 +288,11 @@ class _MobileHomeScreenState extends State<MobileHomeScreen> {
                   ),
                 ),
               ),
-              Card(
+              const Card(
                 margin: EdgeInsets.all(16.0),
                 elevation: 4.0,
                 child: Padding(
-                  padding: const EdgeInsets.all(16.0),
+                  padding: EdgeInsets.all(16.0),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.stretch,
                     children: [
@@ -351,23 +351,23 @@ class _MobileHomeScreenState extends State<MobileHomeScreen> {
               ),
               Card(
                   elevation: 4.0,
-                  margin: EdgeInsets.all(16.0),
+                  margin: const EdgeInsets.all(16.0),
                   child: Column(
                       crossAxisAlignment: CrossAxisAlignment.stretch,
                       children: [
                         Padding(
-                          padding: EdgeInsets.all(16.0),
+                          padding: const EdgeInsets.all(16.0),
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              Text(
+                              const Text(
                                 'About ICVTTS Conference',
                                 style: TextStyle(
                                   fontSize: 20.0,
                                   fontWeight: FontWeight.bold,
                                 ),
                               ),
-                              SizedBox(height: 8.0),
+                              const SizedBox(height: 8.0),
                               Text(
                                 textAlign: TextAlign.justify,
                                 _expanded
@@ -381,7 +381,7 @@ class _MobileHomeScreenState extends State<MobileHomeScreen> {
                           ),
                         ),
                         Padding(
-                          padding: EdgeInsets.symmetric(horizontal: 16.0),
+                          padding: const EdgeInsets.symmetric(horizontal: 16.0),
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
@@ -389,7 +389,7 @@ class _MobileHomeScreenState extends State<MobileHomeScreen> {
                                 onPressed: _toggleExpanded,
                                 child: Text(
                                   _expanded ? 'Read Less' : 'Read More',
-                                  style: TextStyle(
+                                  style: const TextStyle(
                                     color: Colors.blue,
                                     fontWeight: FontWeight.bold,
                                   ),
@@ -401,7 +401,7 @@ class _MobileHomeScreenState extends State<MobileHomeScreen> {
                                     'https://www.ieeevtsbangalore-icvtts2024.online/'
                                   ]);
                                 },
-                                icon: Icon(Icons.arrow_forward),
+                                icon: const Icon(Icons.arrow_forward),
                                 color: Colors.blue,
                               ),
                             ],
@@ -412,6 +412,58 @@ class _MobileHomeScreenState extends State<MobileHomeScreen> {
           ),
         ),
       ),
+<<<<<<< HEAD
+=======
+      bottomNavigationBar: Container(
+        padding: EdgeInsets.symmetric(
+          vertical: 8.0,
+          horizontal: MediaQuery.of(context).size.width *
+              0.05, // Adjust the padding based on screen width
+        ),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            // Copyright information
+            Expanded(
+              child: TextButton(
+                onPressed: () {
+                  js.context
+                      .callMethod('open', ['https://www.ieeevtsbangalore.in/']);
+                },
+                child: Text(
+                  '© ${DateTime.now().year} VTS Bangalore',
+                  style: const TextStyle(
+                      fontSize: 12.0, fontStyle: FontStyle.italic),
+                ),
+              ),
+            ),
+            // Social media links with icons
+            Row(
+              children: [
+                IconButton(
+                  onPressed: () {
+                    // Handle social media link tap
+                  },
+                  icon: const Icon(Icons.facebook),
+                ),
+                IconButton(
+                  onPressed: () {
+                    // Handle social media link tap
+                  },
+                  icon: const Icon(Icons.person),
+                ),
+                IconButton(
+                  onPressed: () {
+                    // Handle social media link tap
+                  },
+                  icon: const Icon(Icons.person),
+                ),
+              ],
+            ),
+          ],
+        ),
+      ),
+>>>>>>> refs/remotes/origin/main
     );
   }
 }

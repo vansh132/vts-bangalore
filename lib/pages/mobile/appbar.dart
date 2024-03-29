@@ -72,14 +72,14 @@ Widget drawer(BuildContext context) {
           leading: Icon(Icons.accessibility_new_rounded),
           title: const Text('Special Interest Group'),
           onTap: () {
-            // Add onTap logic for Item 2
+            context.goNamed(MyAppRouteConstants.mobileSIGScreen);
           },
         ),
         ListTile(
           leading: Icon(Icons.ac_unit_rounded),
           title: const Text('Student Branch Chapter'),
           onTap: () {
-            // Add onTap logic for Item 2
+            context.goNamed(MyAppRouteConstants.mobileSBCScreen);
           },
         ),
         ListTile(
