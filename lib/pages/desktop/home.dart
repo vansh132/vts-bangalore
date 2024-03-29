@@ -81,7 +81,70 @@ class _DesktopHomeScreenState extends State<DesktopHomeScreen> {
         ElevatedButton(
           onPressed: () {},
           child: Text("Demo button"),
-          // style: Theme.of(context),
+        ),
+        Row(
+          children: [
+            Container(
+              height: 48,
+              width: 48,
+              color: CustomColors.bgDark,
+              margin: EdgeInsets.only(right: 8),
+            ),
+            Container(
+              height: 48,
+              width: 48,
+              color: CustomColors.bgLight,
+              margin: EdgeInsets.only(right: 8),
+            ),
+            Container(
+              height: 48,
+              width: 48,
+              color: CustomColors.primaryColor,
+              margin: EdgeInsets.only(right: 8),
+            ),
+            Container(
+              height: 48,
+              width: 48,
+              color: CustomColors.primaryDarkColor,
+              margin: EdgeInsets.only(right: 8),
+            ),
+            Container(
+              height: 48,
+              width: 48,
+              color: CustomColors.alertColor,
+              margin: EdgeInsets.only(right: 8),
+            ),
+            Container(
+              height: 48,
+              width: 48,
+              color: CustomColors.warningColor,
+              margin: EdgeInsets.only(right: 8),
+            ),
+            Container(
+              height: 48,
+              width: 48,
+              color: CustomColors.successColor,
+              margin: EdgeInsets.only(right: 8),
+            ),
+            Container(
+              height: 48,
+              width: 48,
+              color: CustomColors.buttonColor,
+              margin: EdgeInsets.only(right: 8),
+            ),
+            Container(
+              height: 48,
+              width: 48,
+              color: CustomColors.buttonDarkColor,
+              margin: EdgeInsets.only(right: 8),
+            ),
+            Container(
+              height: 48,
+              width: 48,
+              color: CustomColors.buttonLightColor,
+              margin: EdgeInsets.only(right: 8),
+            ),
+          ],
         )
       ]),
     ));
