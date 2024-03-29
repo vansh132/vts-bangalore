@@ -1,5 +1,7 @@
+import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:vts/constants/colors.dart';
+import 'package:vts/pages/desktop/widgets/custom_image_slider.dart';
 import 'package:vts/pages/desktop/widgets/nav_bar.dart';
 
 class DesktopHomeScreen extends StatefulWidget {
@@ -10,8 +12,6 @@ class DesktopHomeScreen extends StatefulWidget {
 }
 
 class _DesktopHomeScreenState extends State<DesktopHomeScreen> {
-  int selectedPage = 0;
-  List<int> pages = [0, 1, 2, 3];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -19,18 +19,14 @@ class _DesktopHomeScreenState extends State<DesktopHomeScreen> {
         child: Container(
           color: CustomColors.bgLight,
           width: double.maxFinite,
-          height: double.maxFinite,
+          // height: double.maxFinite,
           child: Column(
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
-              NavBar(
+              const NavBar(
                 selectedPage: 0,
               ),
-              Container(
-                color: Colors.yellow,
-                height: double.maxFinite,
-                child: Placeholder(),
-              )
+              CustomImageSlider(),
             ],
           ),
         ),

@@ -5,7 +5,6 @@ import 'package:vts/pages/desktop/exCom.dart';
 import 'package:vts/pages/desktop/home.dart';
 import 'package:vts/pages/mobile/about_screen.dart';
 import 'package:vts/pages/mobile/home.dart';
-import 'package:vts/pages/tablet/home.dart';
 import 'package:vts/responsive_layout.dart';
 import 'package:vts/routes/app_route_constants.dart';
 
