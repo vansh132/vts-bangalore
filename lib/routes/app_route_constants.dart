@@ -5,6 +5,7 @@ class MyAppRouteConstants {
   static const String desktopAboutScreen = 'desktop-about';
   static const String desktopExComScreen = 'desktop-excom';
   //Mobile Routes
+  static const String mobileHomeScreen = 'mobile-home';
   static const String mobileAboutScreen = 'mobile-about';
   static const String mobileExComScreen = 'mobile-excom';
 }

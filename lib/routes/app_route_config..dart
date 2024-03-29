@@ -2,7 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:vts/pages/desktop/about.dart';
 import 'package:vts/pages/desktop/home.dart';
+import 'package:vts/pages/mobile/about_screen.dart';
 import 'package:vts/pages/mobile/home.dart';
+import 'package:vts/pages/mobile/home_screen.dart';
 import 'package:vts/pages/tablet/home.dart';
 import 'package:vts/responsive_layout.dart';
 import 'package:vts/routes/app_route_constants.dart';
@@ -14,7 +16,7 @@ class MyAppRouter {
       path: "/",
       builder: (context, state) => const ResponsiveLayout(
         desktopScaffold: DesktopHomeScreen(),
-        mobileScaffold: MobileHomeScreeen(),
+        mobileScaffold: MobileHomeTopScreeen(),
         tabletScaffold: TabletHomeScreen(),
       ),
     ),
@@ -28,6 +30,21 @@ class MyAppRouter {
       path: "/desktop-excom",
       pageBuilder: (context, state) {
         return const MaterialPage(child: DesktopAboutScreen());
+      },
+    ),
+    //mobile routes
+    GoRoute(
+      name: MyAppRouteConstants.mobileHomeScreen,
+      path: "/mobile-home",
+      pageBuilder: (context, state) {
+        return const MaterialPage(child: MobileHomeTopScreeen());
+      },
+    ),
+    GoRoute(
+      name: MyAppRouteConstants.mobileAboutScreen,
+      path: "/mobile-about",
+      pageBuilder: (context, state) {
+        return const MaterialPage(child: MobileAboutScreen());
       },
     ),
   ]);
