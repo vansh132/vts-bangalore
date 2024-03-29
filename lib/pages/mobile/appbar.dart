@@ -7,7 +7,7 @@ AppBar appBar = AppBar(
   leading: Container(
     margin: const EdgeInsets.only(left: 10),
     child: Image.network(
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRR3ljIUrYP7Pu52rkksb7YHpX9A0YK22I6-hgVp7lH5Q&s",
+      "https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=220,fit=crop,q=95/AGBvpEEMy0HRaOqe/screenshot_2024-01-20_at_4.58.29_pm__1_-removebg-preview-AzGDRzRzGXh5jGEM.png",
     ),
   ),
 );
