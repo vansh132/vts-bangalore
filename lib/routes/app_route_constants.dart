@@ -7,5 +7,6 @@ class MyAppRouteConstants {
   //Mobile Routes
   static const String mobileHomeScreen = 'mobile-home';
   static const String mobileAboutScreen = 'mobile-about';
+  static const String mobileSIGScreen = 'mobile-sig';
   static const String mobileExComScreen = 'mobile-excom';
 }

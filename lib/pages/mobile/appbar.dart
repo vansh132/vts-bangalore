@@ -14,6 +14,7 @@ AppBar appBar = AppBar(
 
 Widget drawer(BuildContext context) {
   return Drawer(
+    width: MediaQuery.of(context).size.width,
     child: ListView(
       padding: EdgeInsets.zero,
       children: <Widget>[
@@ -37,7 +38,7 @@ Widget drawer(BuildContext context) {
                   width: 20,
                 ),
                 SizedBox(
-                  width: MediaQuery.of(context).size.width * 0.4,
+                  width: MediaQuery.of(context).size.width * 0.5,
                   child: const Text(
                     "IEEE Vehicular Technology Society Chapter Bangalore",
                     softWrap: true,
