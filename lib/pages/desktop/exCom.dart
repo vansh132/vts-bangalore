@@ -5,6 +5,10 @@ class DesktopExComScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Placeholder();
+    return Scaffold(
+      body: Center(
+        child: Text("ExCom"),
+      ),
+    );
   }
 }

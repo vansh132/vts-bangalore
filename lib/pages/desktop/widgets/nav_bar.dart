@@ -12,11 +12,9 @@ class NavBar extends StatefulWidget {
 }
 
 class _NavBarState extends State<NavBar> {
-  // int selectedPage = 0;
-  List<int> pages = [0, 1, 2, 3];
   @override
   Widget build(BuildContext context) {
-    final _width = MediaQuery.of(context).size.width;
+    final width = MediaQuery.of(context).size.width;
     return Container(
       // color: Colors.red,
       margin: const EdgeInsets.symmetric(vertical: 16),
@@ -34,7 +32,7 @@ class _NavBarState extends State<NavBar> {
                     "https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=220,fit=crop,q=95/AGBvpEEMy0HRaOqe/screenshot_2024-01-20_at_4.58.29_pm__1_-removebg-preview-AzGDRzRzGXh5jGEM.png",
                   ),
                   Text(
-                    _width >= 1440
+                    width >= 1440
                         ? "IEEE Vehicular Technological Society"
                         : "IEEE VTS: Bangalore",
                     style: Theme.of(context).textTheme.headlineMedium,
@@ -99,7 +97,7 @@ class _NavBarState extends State<NavBar> {
                     child: GestureDetector(
                       onTap: () {
                         context.pushNamed(
-                          MyAppRouteConstants.homeRouteName,
+                          MyAppRouteConstants.desktopAboutScreen,
                         );
                       },
                       child: Text(
@@ -133,7 +131,7 @@ class _NavBarState extends State<NavBar> {
                     child: GestureDetector(
                       onTap: () {
                         context.pushNamed(
-                          MyAppRouteConstants.homeRouteName,
+                          MyAppRouteConstants.desktopExComScreen,
                         );
                       },
                       child: Text(
@@ -166,9 +164,9 @@ class _NavBarState extends State<NavBar> {
                           ),
                     child: GestureDetector(
                       onTap: () {
-                        context.pushNamed(
-                          MyAppRouteConstants.homeRouteName,
-                        );
+                        // context.pushNamed(
+                        //   MyAppRouteConstants.homeRouteName,
+                        // );
                       },
                       child: Text(
                         "Events",
@@ -200,9 +198,9 @@ class _NavBarState extends State<NavBar> {
                           ),
                     child: GestureDetector(
                       onTap: () {
-                        context.pushNamed(
-                          MyAppRouteConstants.homeRouteName,
-                        );
+                        // context.pushNamed(
+                        //   MyAppRouteConstants.homeRouteName,
+                        // );
                       },
                       child: Text(
                         "Resource",

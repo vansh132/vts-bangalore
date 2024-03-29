@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:vts/pages/desktop/about.dart';
+import 'package:vts/pages/desktop/exCom.dart';
 import 'package:vts/pages/desktop/home.dart';
 import 'package:vts/pages/mobile/about_screen.dart';
 import 'package:vts/pages/mobile/home.dart';
@@ -28,7 +29,7 @@ class MyAppRouter {
       name: MyAppRouteConstants.desktopExComScreen,
       path: "/desktop-excom",
       pageBuilder: (context, state) {
-        return const MaterialPage(child: DesktopAboutScreen());
+        return const MaterialPage(child: DesktopExComScreen());
       },
     ),
     //mobile routes
