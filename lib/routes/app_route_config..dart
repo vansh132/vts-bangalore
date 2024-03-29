@@ -17,7 +17,7 @@ class MyAppRouter {
       builder: (context, state) => const ResponsiveLayout(
         desktopScaffold: DesktopHomeScreen(),
         mobileScaffold: MobileHomeTopScreeen(),
-        tabletScaffold: TabletHomeScreen(),
+        tabletScaffold: MobileHomeTopScreeen(),
       ),
     ),
     GoRoute(
