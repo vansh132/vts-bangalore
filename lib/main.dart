@@ -131,7 +131,7 @@ class _MyHomePageState extends State<MyHomePage> {
       home: const ResponsiveLayout(
         mobileScaffold: MobileHomeScreeen(),
         desktopScaffold: DesktopHomeScreen(),
-        tabletScaffold: TabletHomeScreen(),
+        tabletScaffold: MobileHomeScreeen(),
       ),
     );
   }
