@@ -1,8 +1,10 @@
 import 'dart:js' as js;
 
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:vts/constants/colors.dart';
 import 'package:vts/pages/desktop/widgets/custom_image_slider.dart';
+import 'package:vts/pages/desktop/widgets/footer.dart';
 import 'package:vts/pages/desktop/widgets/nav_bar.dart';
 
 class DesktopHomeScreen extends StatefulWidget {
@@ -48,6 +50,7 @@ class _DesktopHomeScreenState extends State<DesktopHomeScreen> {
               mission(),
               fieldOfInterest(width, _isHovering),
               icvttsConference(width, _isHovering),
+              CustomFooter()
             ],
           ),
         ),
