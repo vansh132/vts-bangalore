@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:go_router/go_router.dart';
 import 'package:vts/pages/mobile/appbar.dart';
 import 'dart:js' as js;
 
@@ -8,7 +7,6 @@ class MobileSpecialInterestGroup extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var width = MediaQuery.of(context).size.width;
     return Scaffold(
       appBar: appBar,
       endDrawer: drawer(context),

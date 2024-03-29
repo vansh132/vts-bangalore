@@ -38,9 +38,6 @@ dependencies:
   go_router: ^13.2.2
   carousel_slider: ^4.2.1
   url_launcher: ^6.2.5
-  svg_flutter: ^0.0.1
-  font_awesome_flutter: ^10.7.0
-  icons_plus: ^5.0.0
   flutter_social_button: ^1.1.4+1
 
 dev_dependencies:

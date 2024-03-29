@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_social_button/flutter_social_button.dart';
-import 'package:icons_plus/icons_plus.dart';
 import 'package:vts/constants/colors.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class CustomFooter extends StatelessWidget {
   const CustomFooter({super.key});
