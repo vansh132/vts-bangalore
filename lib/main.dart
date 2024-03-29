@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:vts/constants/colors.dart';
 import 'package:vts/pages/desktop/home.dart';
 import 'package:vts/pages/mobile/home.dart';
 import 'package:vts/pages/tablet/home.dart';
@@ -11,15 +13,94 @@ void main() {
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
+    final textTheme = Theme.of(context).textTheme;
     return MaterialApp(
       title: 'Flutter Demo',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+        brightness: Brightness.light,
+        scaffoldBackgroundColor: CustomColors.bgLight,
+        colorScheme: ColorScheme.fromSeed(seedColor: CustomColors.primaryColor),
         useMaterial3: true,
+        textTheme: GoogleFonts.openSansCondensedTextTheme(textTheme).copyWith(
+          //heading - nunitoSans
+          headlineLarge: GoogleFonts.nunitoSans(
+              textStyle: const TextStyle().copyWith(
+            fontSize: 32,
+            fontWeight: FontWeight.bold,
+            color: CustomColors.textBlackColor,
+          )),
+          headlineMedium: GoogleFonts.nunitoSans(
+              textStyle: const TextStyle().copyWith(
+            fontSize: 24,
+            fontWeight: FontWeight.w600,
+            color: CustomColors.textBlackColor,
+          )),
+          headlineSmall: GoogleFonts.nunitoSans(
+              textStyle: const TextStyle().copyWith(
+            fontSize: 18,
+            fontWeight: FontWeight.w600,
+            color: CustomColors.textBlackColor,
+          )),
+          //title - roboto Serif
+          titleLarge: GoogleFonts.robotoSerif(
+              textStyle: const TextStyle().copyWith(
+            fontSize: 16,
+            fontWeight: FontWeight.w600,
+            color: CustomColors.textBlackColor,
+          )),
+          titleMedium: GoogleFonts.robotoSerif(
+              textStyle: const TextStyle().copyWith(
+            fontSize: 16,
+            fontWeight: FontWeight.w500,
+            color: CustomColors.textBlackColor,
+          )),
+          titleSmall: GoogleFonts.robotoSerif(
+              textStyle: const TextStyle().copyWith(
+            fontSize: 16,
+            fontWeight: FontWeight.w400,
+            color: CustomColors.textBlackColor,
+          )),
+          //body - Poppings
+          bodyLarge: GoogleFonts.poppins(
+              textStyle: const TextStyle().copyWith(
+            fontSize: 14,
+            fontWeight: FontWeight.w500,
+            color: CustomColors.textBlackColor,
+          )),
+          bodyMedium: GoogleFonts.poppins(
+              textStyle: const TextStyle().copyWith(
+            fontSize: 14,
+            fontWeight: FontWeight.normal,
+            color: CustomColors.textBlackColor,
+          )),
+          bodySmall: GoogleFonts.poppins(
+              textStyle: const TextStyle().copyWith(
+            fontSize: 14,
+            fontWeight: FontWeight.w500,
+            color: CustomColors.textBlackColor.withOpacity(0.5),
+          )),
+          //lable
+          labelLarge: GoogleFonts.openSans(
+              textStyle: const TextStyle().copyWith(
+            fontSize: 12,
+            fontWeight: FontWeight.normal,
+            color: CustomColors.textBlackColor,
+          )),
+          labelMedium: GoogleFonts.openSans(
+              textStyle: const TextStyle().copyWith(
+            fontSize: 12,
+            fontWeight: FontWeight.normal,
+            color: CustomColors.textBlackColor.withOpacity(0.5),
+          )),
+        ),
+        elevatedButtonTheme: ElevatedButtonThemeData(
+          style: ElevatedButton.styleFrom(
+              backgroundColor: CustomColors.buttonColor,
+              foregroundColor: Colors.white),
+        ),
       ),
       home: const ResponsiveLayout(
         mobileScaffold: MobileHomeScreeen(),
@@ -31,18 +112,7 @@ class MyApp extends StatelessWidget {
 }
 
 class MyHomePage extends StatefulWidget {
-  const MyHomePage({super.key, required this.title});
-
-  // This widget is the home page of your application. It is stateful, meaning
-  // that it has a State object (defined below) that contains fields that affect
-  // how it looks.
-
-  // This class is the configuration for the state. It holds the values (in this
-  // case the title) provided by the parent (in this case the App widget) and
-  // used by the build method of the State. Fields in a Widget subclass are
-  // always marked "final".
-
-  final String title;
+  const MyHomePage({super.key});
 
   @override
   State<MyHomePage> createState() => _MyHomePageState();
@@ -55,7 +125,7 @@ class _MyHomePageState extends State<MyHomePage> {
       title: 'Flutter Demo',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+        colorScheme: ColorScheme.fromSeed(seedColor: CustomColors.primaryColor),
         useMaterial3: true,
       ),
       home: const ResponsiveLayout(
