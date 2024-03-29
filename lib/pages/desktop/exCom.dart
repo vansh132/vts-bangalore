@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class ExComScreen extends StatelessWidget {
-  const ExComScreen({super.key});
+class DesktopExComScreen extends StatelessWidget {
+  const DesktopExComScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
