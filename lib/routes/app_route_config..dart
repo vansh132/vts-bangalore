@@ -4,7 +4,6 @@ import 'package:vts/pages/desktop/about.dart';
 import 'package:vts/pages/desktop/home.dart';
 import 'package:vts/pages/mobile/about_screen.dart';
 import 'package:vts/pages/mobile/home.dart';
-import 'package:vts/pages/mobile/home_screen.dart';
 import 'package:vts/pages/tablet/home.dart';
 import 'package:vts/responsive_layout.dart';
 import 'package:vts/routes/app_route_constants.dart';

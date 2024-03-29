@@ -19,7 +19,7 @@ class MobileHomeScreen extends StatelessWidget {
     return Scaffold(
       endDrawer: drawer(context),
       body: Container(
-        margin: EdgeInsets.all(12),
+        margin: const EdgeInsets.all(12),
         width: width,
         child: SingleChildScrollView(
           child: Column(
@@ -150,7 +150,7 @@ class MobileHomeScreen extends StatelessWidget {
                           padding: EdgeInsets.symmetric(
                               vertical: 4.0, horizontal: 12.0),
                           child: Text(
-                            'Introduction',
+                            'IEEE VTS',
                             style: TextStyle(
                               fontSize: 20,
                               color: Colors.white,

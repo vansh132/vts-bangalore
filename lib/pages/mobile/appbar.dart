@@ -68,6 +68,20 @@ Widget drawer(BuildContext context) {
           },
         ),
         ListTile(
+          leading: Icon(Icons.accessibility_new_rounded),
+          title: const Text('Special Interest Group'),
+          onTap: () {
+            // Add onTap logic for Item 2
+          },
+        ),
+        ListTile(
+          leading: Icon(Icons.ac_unit_rounded),
+          title: const Text('Student Branch Chapter'),
+          onTap: () {
+            // Add onTap logic for Item 2
+          },
+        ),
+        ListTile(
           leading: Icon(Icons.event_rounded),
           title: const Text('Events'),
           onTap: () {
