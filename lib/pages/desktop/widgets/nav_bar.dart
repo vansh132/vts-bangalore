@@ -16,8 +16,18 @@ class _NavBarState extends State<NavBar> {
   Widget build(BuildContext context) {
     final width = MediaQuery.of(context).size.width;
     return Container(
-      // color: Colors.red,
-      margin: const EdgeInsets.symmetric(vertical: 16),
+      decoration: BoxDecoration(
+        color: CustomColors.bgLight,
+        boxShadow: [
+          BoxShadow(
+            color: Colors.grey.withOpacity(0.5),
+            spreadRadius: 5,
+            blurRadius: 7,
+            offset: Offset(0, 3), // changes position of shadow
+          ),
+        ],
+      ),
+      // padding: const EdgeInsets.symmetric(vertical: 16),
       height: MediaQuery.of(context).size.height * 0.1,
       child: Row(
         children: [
@@ -45,6 +55,7 @@ class _NavBarState extends State<NavBar> {
             flex: 3,
             child: Container(
               // color: Colors.red,
+              // alignment: Alignment.center,
               height: double.maxFinite,
               child: Row(
                 crossAxisAlignment: CrossAxisAlignment.center,

@@ -17,6 +17,9 @@ class CustomImageSlider extends StatelessWidget {
         autoPlay: true,
         enlargeCenterPage: true,
         viewportFraction: 1,
+        autoPlayCurve: Curves.easeInOut,
+        autoPlayInterval: Duration(seconds: 5),
+        autoPlayAnimationDuration: Duration(milliseconds: 1200),
       ),
       items: imageUrls.map((String imageUrl) {
         return Builder(
