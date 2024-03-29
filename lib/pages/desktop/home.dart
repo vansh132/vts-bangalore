@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
-import 'package:go_router/go_router.dart';
 import 'package:vts/constants/colors.dart';
-import 'package:vts/routes/app_route_constants.dart';
+import 'package:vts/pages/desktop/widgets/nav_bar.dart';
 
 class DesktopHomeScreen extends StatefulWidget {
   const DesktopHomeScreen({super.key});
@@ -12,6 +10,8 @@ class DesktopHomeScreen extends StatefulWidget {
 }
 
 class _DesktopHomeScreenState extends State<DesktopHomeScreen> {
+  int selectedPage = 0;
+  List<int> pages = [0, 1, 2, 3];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -23,44 +23,8 @@ class _DesktopHomeScreenState extends State<DesktopHomeScreen> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
-              Container(
-                color: Colors.red,
-                height: MediaQuery.of(context).size.height * 0.1,
-                child: Row(
-                  children: [
-                    Expanded(
-                      flex: 2,
-                      child: Container(
-                        child: Text("Logo"),
-                      ),
-                    ),
-                    Expanded(
-                      flex: 3,
-                      child: Container(
-                        child: Row(
-                          children: [
-                            TextButton(
-                              onPressed: () {},
-                              child: Text("Home"),
-                            ),
-                            TextButton(
-                              onPressed: () {
-                                context.goNamed(
-                                  MyAppRouteConstants.desktopAboutScreen,
-                                );
-                              },
-                              child: Text("About"),
-                            ),
-                            TextButton(
-                              onPressed: () {},
-                              child: Text("ExCom"),
-                            ),
-                          ],
-                        ),
-                      ),
-                    ),
-                  ],
-                ),
+              NavBar(
+                selectedPage: 0,
               ),
               Container(
                 color: Colors.yellow,
