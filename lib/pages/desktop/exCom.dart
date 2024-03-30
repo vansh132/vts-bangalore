@@ -167,9 +167,8 @@ class _DesktopExComScreenState extends State<DesktopExComScreen> {
                           crossAxisSpacing:
                               20, // Add spacing between grid items
                           mainAxisSpacing: 20, // Add spacing between rows
-                          childAspectRatio: width <= 1024
-                              ? 1.75 / 2
-                              : 1.05 / 1, // Adjust aspect ratio for grid items
+                          childAspectRatio:
+                              2 / 2.3, // Adjust aspect ratio for grid items
                         ),
                         itemCount: excom.length,
                         itemBuilder: (context, index) {
