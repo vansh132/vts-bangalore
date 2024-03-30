@@ -44,6 +44,9 @@ class _DesktopHomeScreenState extends State<DesktopHomeScreen> {
                 height: 16,
               ),
               const CustomImageSlider(),
+              SizedBox(
+                height: 0,
+              ),
               joinCommunity(_isHoveredTile),
               Container(
                 height: 500,
