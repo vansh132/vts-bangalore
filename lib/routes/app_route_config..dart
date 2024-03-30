@@ -5,6 +5,7 @@ import 'package:vts/pages/desktop/admin/admin.dart';
 import 'package:vts/pages/desktop/exCom.dart';
 import 'package:vts/pages/desktop/home.dart';
 import 'package:vts/pages/mobile/about_screen.dart';
+import 'package:vts/pages/mobile/contactus.dart';
 import 'package:vts/pages/mobile/event_screen.dart';
 import 'package:vts/pages/mobile/excom_screen.dart';
 import 'package:vts/pages/mobile/home.dart';
@@ -82,6 +83,13 @@ class MyAppRouter {
       path: "/mobile-events",
       pageBuilder: (context, state) {
         return MaterialPage(child: MobileEventScreen());
+      },
+    ),
+    GoRoute(
+      name: MyAppRouteConstants.mobileContactUsScreen,
+      path: "/mobile-contactus",
+      pageBuilder: (context, state) {
+        return MaterialPage(child: MobileContactUs());
       },
     ),
   ]);
