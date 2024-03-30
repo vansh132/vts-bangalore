@@ -496,8 +496,10 @@ class _DesktopHomeScreenState extends State<DesktopHomeScreen> {
                       SizedBox(
                         height: 20,
                       ),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceAround,
+                      Wrap(
+                        // mainAxisAlignment: MainAxisAlignment.spaceAround,
+                        spacing: 8,
+                        runSpacing: 8,
                         children: [
                           ElevatedButton.icon(
                             icon: const Icon(Icons.app_registration),

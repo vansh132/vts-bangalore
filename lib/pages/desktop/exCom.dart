@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:vts/constants/colors.dart';
 import 'package:vts/pages/desktop/widgets/footer.dart';
 import 'package:vts/pages/desktop/widgets/nav_bar.dart';
+import 'package:vts/pages/mobile/excom_screen.dart';
 import 'package:vts/pages/mobile/model/Excom.dart';
 
 class DesktopExComScreen extends StatefulWidget {
@@ -125,66 +126,69 @@ class _DesktopExComScreenState extends State<DesktopExComScreen> {
   @override
   Widget build(BuildContext context) {
     final width = MediaQuery.of(context).size.width;
-    return Scaffold(
-      body: SingleChildScrollView(
-        child: Container(
-          color: CustomColors.bgLight,
-          width: double.maxFinite,
-          // height: double.maxFinite,
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.start,
-            children: [
-              const NavBar(
-                selectedPage: 2,
-              ),
-              Container(
-                // color: Colors.yellow,
+    return width <= 768
+        ? MobileExComScreen()
+        : Scaffold(
+            body: SingleChildScrollView(
+              child: Container(
+                color: CustomColors.bgLight,
+                width: double.maxFinite,
                 // height: double.maxFinite,
                 child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.stretch,
+                  mainAxisAlignment: MainAxisAlignment.start,
                   children: [
-                    Container(
-                      alignment: Alignment.center,
-                      padding: const EdgeInsets.symmetric(vertical: 16),
-                      color: CustomColors
-                          .primaryColor, // Background color for the header
-                      child: const Text(
-                        'ExCom 2024 Committee', // Your header text
-                        style: const TextStyle(
-                            fontWeight: FontWeight.bold,
-                            fontSize: 20,
-                            color: Colors.white),
-                      ),
+                    const NavBar(
+                      selectedPage: 2,
                     ),
                     Container(
-                      margin: const EdgeInsets.all(16),
-                      height: 800,
-                      child: GridView.builder(
-                        gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                          crossAxisCount: width >= 1440
-                              ? 4
-                              : 3, // Adjust based on screen width
-                          crossAxisSpacing:
-                              20, // Add spacing between grid items
-                          mainAxisSpacing: 20, // Add spacing between rows
-                          childAspectRatio:
-                              2 / 2.3, // Adjust aspect ratio for grid items
-                        ),
-                        itemCount: excom.length,
-                        itemBuilder: (context, index) {
-                          return _buildExcomCard(excom[index]);
-                        },
+                      // color: Colors.yellow,
+                      // height: double.maxFinite,
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.stretch,
+                        children: [
+                          Container(
+                            alignment: Alignment.center,
+                            padding: const EdgeInsets.symmetric(vertical: 16),
+                            color: CustomColors
+                                .primaryColor, // Background color for the header
+                            child: const Text(
+                              'ExCom 2024 Committee', // Your header text
+                              style: const TextStyle(
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 20,
+                                  color: Colors.white),
+                            ),
+                          ),
+                          Container(
+                            margin: const EdgeInsets.all(16),
+                            height: 800,
+                            child: GridView.builder(
+                              gridDelegate:
+                                  SliverGridDelegateWithFixedCrossAxisCount(
+                                crossAxisCount: width >= 1440
+                                    ? 4
+                                    : 3, // Adjust based on screen width
+                                crossAxisSpacing:
+                                    20, // Add spacing between grid items
+                                mainAxisSpacing: 20, // Add spacing between rows
+                                childAspectRatio: 2 /
+                                    2.3, // Adjust aspect ratio for grid items
+                              ),
+                              itemCount: excom.length,
+                              itemBuilder: (context, index) {
+                                return _buildExcomCard(excom[index]);
+                              },
+                            ),
+                          ),
+                          const CustomFooter(),
+                        ],
                       ),
-                    ),
-                    const CustomFooter(),
+                    )
                   ],
                 ),
-              )
-            ],
-          ),
-        ),
-      ),
-    );
+              ),
+            ),
+          );
   }
 
   Widget _buildExcomCard(Excom excomMember) {
