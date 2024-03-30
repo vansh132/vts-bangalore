@@ -5,6 +5,7 @@ import 'package:vts/pages/desktop/admin/admin.dart';
 import 'package:vts/pages/desktop/exCom.dart';
 import 'package:vts/pages/desktop/home.dart';
 import 'package:vts/pages/mobile/about_screen.dart';
+import 'package:vts/pages/mobile/event_screen.dart';
 import 'package:vts/pages/mobile/excom_screen.dart';
 import 'package:vts/pages/mobile/home.dart';
 import 'package:vts/pages/mobile/special_interest_group.dart';
@@ -74,6 +75,13 @@ class MyAppRouter {
       path: "/mobile-excom",
       pageBuilder: (context, state) {
         return const MaterialPage(child: MobileExComScreen());
+      },
+    ),
+    GoRoute(
+      name: MyAppRouteConstants.mobileEventScreen,
+      path: "/mobile-events",
+      pageBuilder: (context, state) {
+        return MaterialPage(child: MobileEventScreen());
       },
     ),
   ]);

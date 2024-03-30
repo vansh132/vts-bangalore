@@ -5,6 +5,7 @@ import 'package:carousel_slider/carousel_slider.dart';
 
 import 'package:url_launcher/url_launcher.dart';
 import 'package:vts/constants/colors.dart';
+import 'package:vts/pages/desktop/widgets/footer.dart';
 import 'package:vts/pages/mobile/appbar.dart';
 
 class MobileHomeScreen extends StatefulWidget {
@@ -350,115 +351,68 @@ class _MobileHomeScreenState extends State<MobileHomeScreen> {
                 ),
               ),
               Card(
-                  elevation: 4.0,
-                  margin: const EdgeInsets.all(16.0),
-                  child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.stretch,
-                      children: [
-                        Padding(
-                          padding: const EdgeInsets.all(16.0),
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              const Text(
-                                'About ICVTTS Conference',
-                                style: TextStyle(
-                                  fontSize: 20.0,
-                                  fontWeight: FontWeight.bold,
-                                ),
-                              ),
-                              const SizedBox(height: 8.0),
-                              Text(
-                                textAlign: TextAlign.justify,
-                                _expanded
-                                    ? 'Vehicular Technology Society (VTS) Bangalore is one of the dynamic and vibrant societies in the region. Many professionals who are the members work in various domains in automobile and related industry. Recently, not only in this region but entire world has seen tremendous growth in the automobile industry. Research and development, innovation, number of applications in land, underwater and space has significantly increased. It is felt an urgent need to bring together scientists, engineers, researchers, developers, operators and all share holder to discuss the issues and latest technological innovation in this and related industries. ICVTTS is conceived to create a platform to bring them together.'
-                                    : 'Vehicular Technology Society (VTS) Bangalore is one of the dynamic and vibrant societies in the region. Many professionals who are the members work in various domains in automobile and related industry. ',
-                                maxLines: _expanded ? null : 2,
-                                overflow:
-                                    _expanded ? null : TextOverflow.ellipsis,
-                              ),
-                            ],
+                elevation: 4.0,
+                margin: const EdgeInsets.all(16.0),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.stretch,
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.all(16.0),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          const Text(
+                            'About ICVTTS Conference',
+                            style: TextStyle(
+                              fontSize: 20.0,
+                              fontWeight: FontWeight.bold,
+                            ),
                           ),
-                        ),
-                        Padding(
-                          padding: const EdgeInsets.symmetric(horizontal: 16.0),
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                              TextButton(
-                                onPressed: _toggleExpanded,
-                                child: Text(
-                                  _expanded ? 'Read Less' : 'Read More',
-                                  style: const TextStyle(
-                                    color: Colors.blue,
-                                    fontWeight: FontWeight.bold,
-                                  ),
-                                ),
-                              ),
-                              IconButton(
-                                onPressed: () {
-                                  js.context.callMethod('open', [
-                                    'https://www.ieeevtsbangalore-icvtts2024.online/'
-                                  ]);
-                                },
-                                icon: const Icon(Icons.arrow_forward),
+                          const SizedBox(height: 8.0),
+                          Text(
+                            textAlign: TextAlign.justify,
+                            _expanded
+                                ? 'Vehicular Technology Society (VTS) Bangalore is one of the dynamic and vibrant societies in the region. Many professionals who are the members work in various domains in automobile and related industry. Recently, not only in this region but entire world has seen tremendous growth in the automobile industry. Research and development, innovation, number of applications in land, underwater and space has significantly increased. It is felt an urgent need to bring together scientists, engineers, researchers, developers, operators and all share holder to discuss the issues and latest technological innovation in this and related industries. ICVTTS is conceived to create a platform to bring them together.'
+                                : 'Vehicular Technology Society (VTS) Bangalore is one of the dynamic and vibrant societies in the region. Many professionals who are the members work in various domains in automobile and related industry. ',
+                            maxLines: _expanded ? null : 2,
+                            overflow: _expanded ? null : TextOverflow.ellipsis,
+                          ),
+                        ],
+                      ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 16.0),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          TextButton(
+                            onPressed: _toggleExpanded,
+                            child: Text(
+                              _expanded ? 'Read Less' : 'Read More',
+                              style: const TextStyle(
                                 color: Colors.blue,
+                                fontWeight: FontWeight.bold,
                               ),
-                            ],
+                            ),
                           ),
-                        ),
-                      ]))
-            ],
-          ),
-        ),
-      ),
-      bottomNavigationBar: Container(
-        padding: EdgeInsets.symmetric(
-          vertical: 8.0,
-          horizontal: MediaQuery.of(context).size.width *
-              0.05, // Adjust the padding based on screen width
-        ),
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-            // Copyright information
-            Expanded(
-              child: TextButton(
-                onPressed: () {
-                  js.context
-                      .callMethod('open', ['https://www.ieeevtsbangalore.in/']);
-                },
-                child: Text(
-                  '© ${DateTime.now().year} VTS Bangalore',
-                  style: const TextStyle(
-                      fontSize: 12.0, fontStyle: FontStyle.italic),
+                          IconButton(
+                            onPressed: () {
+                              js.context.callMethod('open', [
+                                'https://www.ieeevtsbangalore-icvtts2024.online/'
+                              ]);
+                            },
+                            icon: const Icon(Icons.arrow_forward),
+                            color: Colors.blue,
+                          ),
+                        ],
+                      ),
+                    ),
+                  ],
                 ),
               ),
-            ),
-            // Social media links with icons
-            Row(
-              children: [
-                IconButton(
-                  onPressed: () {
-                    // Handle social media link tap
-                  },
-                  icon: const Icon(Icons.facebook),
-                ),
-                IconButton(
-                  onPressed: () {
-                    // Handle social media link tap
-                  },
-                  icon: const Icon(Icons.person),
-                ),
-                IconButton(
-                  onPressed: () {
-                    // Handle social media link tap
-                  },
-                  icon: const Icon(Icons.person),
-                ),
-              ],
-            ),
-          ],
+              CustomFooter(),
+            ],
+          ),
         ),
       ),
     );

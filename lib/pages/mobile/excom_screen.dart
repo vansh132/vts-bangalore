@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:vts/constants/colors.dart';
+import 'package:vts/pages/desktop/widgets/footer.dart';
 import 'package:vts/pages/mobile/appbar.dart';
 import 'package:vts/pages/mobile/model/Excom.dart';
 
@@ -157,6 +158,7 @@ class _MobileExComScreenState extends State<MobileExComScreen> {
                     },
                   ),
                 ),
+                CustomFooter(),
               ],
             );
           } else {

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:vts/pages/desktop/widgets/footer.dart';
 import 'package:vts/pages/mobile/appbar.dart';
 import 'dart:js' as js;
 
@@ -82,56 +83,9 @@ class MobileAboutScreen extends StatelessWidget {
                   ),
                 ),
               ),
+              CustomFooter()
             ],
           ),
-        ),
-      ),
-      bottomNavigationBar: Container(
-        padding: EdgeInsets.symmetric(
-          vertical: 8.0,
-          horizontal: MediaQuery.of(context).size.width *
-              0.05, // Adjust the padding based on screen width
-        ),
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-            // Copyright information
-            Expanded(
-              child: TextButton(
-                onPressed: () {
-                  js.context
-                      .callMethod('open', ['https://www.ieeevtsbangalore.in/']);
-                },
-                child: Text(
-                  '© ${DateTime.now().year} VTS Bangalore',
-                  style: TextStyle(fontSize: 12.0, fontStyle: FontStyle.italic),
-                ),
-              ),
-            ),
-            // Social media links with icons
-            Row(
-              children: [
-                IconButton(
-                  onPressed: () {
-                    // Handle social media link tap
-                  },
-                  icon: Icon(Icons.facebook),
-                ),
-                IconButton(
-                  onPressed: () {
-                    // Handle social media link tap
-                  },
-                  icon: Icon(Icons.person),
-                ),
-                IconButton(
-                  onPressed: () {
-                    // Handle social media link tap
-                  },
-                  icon: Icon(Icons.person),
-                ),
-              ],
-            ),
-          ],
         ),
       ),
     );

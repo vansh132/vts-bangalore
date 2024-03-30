@@ -11,4 +11,5 @@ class MyAppRouteConstants {
   static const String mobileSIGScreen = 'mobile-sig';
   static const String mobileSBCScreen = 'mobile-sbc';
   static const String mobileExComScreen = 'mobile-excom';
+  static const String mobileEventScreen = 'mobile-events';
 }

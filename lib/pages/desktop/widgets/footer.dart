@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_social_button/flutter_social_button.dart';
@@ -15,50 +16,22 @@ class CustomFooter extends StatelessWidget {
       child: Column(
         // mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: [
-          SizedBox(
-            height: 24,
-          ),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceAround,
-            children: [
-              Text(
-                "© 2024 IEEE VTS Bangalore. All rights reserved. | Terms and Conditions ",
-                style: Theme.of(context)
-                    .textTheme
-                    .titleSmall!
-                    .copyWith(color: Colors.white),
-              ),
-              Wrap(
-                spacing: 8.0,
-                children: [
-                  FlutterSocialButton(
-                    onTap: () {},
-                    mini: true,
-                    buttonType: ButtonType.linkedin,
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              children: [
+                Expanded(
+                  child: Text(
+                    softWrap: true,
+                    textAlign: TextAlign.center,
+                    "© 2024 IEEE VTS Bangalore. All rights reserved. | Terms and Conditions ",
+                    style:
+                        TextStyle(fontSize: 15, color: CustomColors.lightGrey),
                   ),
-                  FlutterSocialButton(
-                    onTap: () {},
-                    mini: true,
-                    buttonType: ButtonType.facebook,
-                  ),
-                  FlutterSocialButton(
-                    onTap: () {},
-                    mini: true,
-                    buttonType: ButtonType.google,
-                  ),
-                  FlutterSocialButton(
-                    onTap: () {},
-                    mini: true,
-                    buttonType: ButtonType.whatsapp,
-                  ),
-
-                  // Add more social media icons here
-                ],
-              )
-            ],
-          ),
-          SizedBox(
-            height: 24,
+                ),
+              ],
+            ),
           ),
           Divider(
             color: CustomColors.lightGrey.withOpacity(0.3),

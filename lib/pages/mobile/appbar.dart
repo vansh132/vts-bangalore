@@ -86,12 +86,12 @@ Widget drawer(BuildContext context) {
           leading: Icon(Icons.event_rounded),
           title: const Text('Events'),
           onTap: () {
-            // Add onTap logic for Item 2
+            context.goNamed(MyAppRouteConstants.mobileEventScreen);
           },
         ),
         ListTile(
-          leading: Icon(Icons.account_tree_sharp),
-          title: const Text('Resources'),
+          leading: Icon(Icons.ads_click_rounded),
+          title: const Text('Achievements'),
           onTap: () {
             // Add onTap logic for Item 2
           },
