@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:vts/pages/desktop/about.dart';
+import 'package:vts/pages/desktop/admin/admin.dart';
 import 'package:vts/pages/desktop/exCom.dart';
 import 'package:vts/pages/desktop/home.dart';
 import 'package:vts/pages/mobile/about_screen.dart';
@@ -20,6 +21,11 @@ class MyAppRouter {
         mobileScaffold: MobileHomeTopScreeen(),
         tabletScaffold: MobileHomeTopScreeen(),
       ),
+    ),
+    GoRoute(
+      name: MyAppRouteConstants.desktopAdminScreen,
+      path: "/desktop-admin",
+      builder: (context, state) => const AdminScreen(),
     ),
     GoRoute(
       name: MyAppRouteConstants.desktopAboutScreen,

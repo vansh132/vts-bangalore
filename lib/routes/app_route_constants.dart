@@ -2,6 +2,7 @@ class MyAppRouteConstants {
   //Root page
   static const String homeRouteName = 'home';
   //Desktop Routes
+  static const String desktopAdminScreen = "desktop-admin";
   static const String desktopAboutScreen = 'desktop-about';
   static const String desktopExComScreen = 'desktop-excom';
   //Mobile Routes

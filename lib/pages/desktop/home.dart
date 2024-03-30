@@ -237,7 +237,7 @@ class _DesktopHomeScreenState extends State<DesktopHomeScreen> {
                       style: Theme.of(context)
                           .textTheme
                           .bodyLarge!
-                          .copyWith(fontSize: width > 1024 ? 22 : 16),
+                          .copyWith(fontSize: width > 1024 ? 20 : 16),
                       textAlign: TextAlign.justify,
                       softWrap: true,
                     ),
