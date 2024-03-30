@@ -47,10 +47,58 @@ class _DesktopHomeScreenState extends State<DesktopHomeScreen> {
               // const CustomImageSlider(),
               ieeeVTS(width, _isHovering),
               joinCommunity(_isHoveredTile),
+              SizedBox(
+                height: 16,
+              ),
+              MouseRegion(
+                onEnter: (_) => setState(() => _isHovering = true),
+                onExit: (_) => setState(() => _isHovering = false),
+                child: AnimatedContainer(
+                  duration: const Duration(
+                      milliseconds: 300), // Set the duration of the animation
+                  padding: const EdgeInsets.all(24),
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(24),
+                    gradient: LinearGradient(
+                      colors: [
+                        _isHovering
+                            ? const Color(0xFF0D2A40)
+                            : const Color(0xFF2970A6),
+                        _isHovering
+                            ? const Color(0xFF2970A6)
+                            : const Color(0xFF0D2A40),
+                      ],
+                      begin: Alignment.topCenter,
+                      end: Alignment.bottomCenter,
+                    ),
+                    boxShadow: [
+                      BoxShadow(
+                        color: Colors.black.withOpacity(0.3),
+                        spreadRadius: 3,
+                        blurRadius: 7,
+                        offset: const Offset(0, 3),
+                      ),
+                    ],
+                  ),
+                  child: Text(
+                    "Recent Events",
+                    style: Theme.of(context).textTheme.headlineMedium!.copyWith(
+                          color: Colors.white,
+                        ),
+                  ),
+                ),
+              ),
+              SizedBox(
+                height: 20,
+              ),
               Container(
                   // height: 500,
                   // color: CustomColors.lightGrey,
                   child: _buildRecentEvents()),
+              Divider(
+                height: 2,
+                color: CustomColors.lightGrey.withOpacity(0.5),
+              ),
               mission(),
               fieldOfInterest(width, _isHovering),
               icvttsConference(width, _isHovering),
