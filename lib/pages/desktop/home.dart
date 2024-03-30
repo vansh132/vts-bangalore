@@ -407,7 +407,7 @@ class _DesktopHomeScreenState extends State<DesktopHomeScreen> {
                               child: ListTile(
                                 leading: Icon(Icons.school),
                                 title: Text(
-                                  "Reva University",
+                                  "REVA University",
                                   style: Theme.of(context)
                                       .textTheme
                                       .bodyMedium!
