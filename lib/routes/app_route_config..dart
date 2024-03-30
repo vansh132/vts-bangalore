@@ -73,7 +73,7 @@ class MyAppRouter {
       name: MyAppRouteConstants.mobileExComScreen,
       path: "/mobile-excom",
       pageBuilder: (context, state) {
-        return const MaterialPage(child: MobileSBCScreen());
+        return const MaterialPage(child: MobileExComScreen());
       },
     ),
   ]);
