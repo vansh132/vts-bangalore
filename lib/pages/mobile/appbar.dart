@@ -89,13 +89,6 @@ Widget drawer(BuildContext context) {
             context.goNamed(MyAppRouteConstants.mobileEventScreen);
           },
         ),
-        ListTile(
-          leading: Icon(Icons.ads_click_rounded),
-          title: const Text('Achievements'),
-          onTap: () {
-            // Add onTap logic for Item 2
-          },
-        ),
       ],
     ),
   );
