@@ -44,7 +44,7 @@ class _NavBarState extends State<NavBar> {
                   ),
                   Text(
                     width >= 1440
-                        ? "IEEE Vehicular Technological Society"
+                        ? "IEEE Vehicular Technological Society: Bangalore"
                         : "IEEE VTS: Bangalore",
                     style: Theme.of(context).textTheme.headlineMedium,
                     softWrap: true,
@@ -165,74 +165,6 @@ class _NavBarState extends State<NavBar> {
                       ),
                     ),
                   ),
-                  // Container(
-                  //   padding: const EdgeInsets.all(12),
-                  //   decoration: widget.selectedPage == 3
-                  //       ? BoxDecoration(
-                  //           color: CustomColors.primaryColor,
-                  //           borderRadius: BorderRadius.circular(24),
-                  //         )
-                  //       : const BoxDecoration(
-                  //           color: Colors.transparent,
-                  //         ),
-                  //   child: GestureDetector(
-                  //     onTap: () {
-                  //       // context.pushNamed(
-                  //       //   MyAppRouteConstants.homeRouteName,
-                  //       // );
-                  //     },
-                  //     child: Text(
-                  //       "Special Interest Group",
-                  //       style: widget.selectedPage == 3
-                  //           ? Theme.of(context)
-                  //               .textTheme
-                  //               .headlineSmall!
-                  //               .copyWith(
-                  //                 // decoration: TextDecoration.underline,
-                  //                 color: Colors.white,
-                  //                 letterSpacing: 0.2,
-                  //               )
-                  //           : Theme.of(context)
-                  //               .textTheme
-                  //               .headlineSmall!
-                  //               .copyWith(),
-                  //     ),
-                  //   ),
-                  // ),
-                  // Container(
-                  //   padding: const EdgeInsets.all(12),
-                  //   decoration: widget.selectedPage == 4
-                  //       ? BoxDecoration(
-                  //           color: CustomColors.primaryColor,
-                  //           borderRadius: BorderRadius.circular(24),
-                  //         )
-                  //       : const BoxDecoration(
-                  //           color: Colors.transparent,
-                  //         ),
-                  //   child: GestureDetector(
-                  //     onTap: () {
-                  //       // context.pushNamed(
-                  //       //   MyAppRouteConstants.homeRouteName,
-                  //       // );
-                  //     },
-                  //     child: Text(
-                  //       "Students Branch Chapter",
-                  //       style: widget.selectedPage == 4
-                  //           ? Theme.of(context)
-                  //               .textTheme
-                  //               .headlineSmall!
-                  //               .copyWith(
-                  //                 // decoration: TextDecoration.underline,
-                  //                 color: Colors.white,
-                  //                 letterSpacing: 0.2,
-                  //               )
-                  //           : Theme.of(context)
-                  //               .textTheme
-                  //               .headlineSmall!
-                  //               .copyWith(),
-                  //     ),
-                  //   ),
-                  // ),
                   Container(
                     padding: const EdgeInsets.all(12),
                     decoration: widget.selectedPage == 5

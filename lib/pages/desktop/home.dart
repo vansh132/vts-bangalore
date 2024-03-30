@@ -43,7 +43,7 @@ class _DesktopHomeScreenState extends State<DesktopHomeScreen> {
               const SizedBox(
                 height: 16,
               ),
-              // const CustomImageSlider(),
+              const CustomImageSlider(),
               joinCommunity(_isHoveredTile),
               Container(
                 height: 500,
@@ -448,19 +448,20 @@ class _DesktopHomeScreenState extends State<DesktopHomeScreen> {
                         ],
                       ),
                       SizedBox(
-                        height: 12,
+                        height: 20,
                       ),
                       Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceAround,
                         children: [
                           ElevatedButton.icon(
-                            icon: const Icon(Icons.lightbulb),
+                            icon: const Icon(Icons.app_registration),
                             onPressed: () {
                               js.context.callMethod('open', [
                                 'https://www.tvsiql.com/professional-chapters/'
                               ]);
                             },
                             label: const Text(
-                              "Explore SIG Initiatives",
+                              "Register New SBC",
                               style: TextStyle(
                                 fontSize: 16,
                                 color: Colors.white,
@@ -500,7 +501,7 @@ class _DesktopHomeScreenState extends State<DesktopHomeScreen> {
                               ]);
                             },
                             label: const Text(
-                              "ExCom Members SIG Initiatives",
+                              "ExCom Members",
                               style: TextStyle(
                                 fontSize: 16,
                                 color: Colors.white,
