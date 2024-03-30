@@ -43,10 +43,8 @@ class _DesktopHomeScreenState extends State<DesktopHomeScreen> {
               const SizedBox(
                 height: 16,
               ),
-              const CustomImageSlider(),
-              SizedBox(
-                height: 0,
-              ),
+              // const CustomImageSlider(),
+              ieeeVTS(width, _isHovering),
               joinCommunity(_isHoveredTile),
               Container(
                 height: 500,
@@ -55,7 +53,6 @@ class _DesktopHomeScreenState extends State<DesktopHomeScreen> {
                   child: Text("Recent Events"),
                 ),
               ),
-              ieeeVTS(width, _isHovering),
               mission(),
               fieldOfInterest(width, _isHovering),
               icvttsConference(width, _isHovering),
