@@ -65,7 +65,7 @@ Widget drawer(BuildContext context) {
           leading: Icon(Icons.wysiwyg_sharp),
           title: const Text('Excom'),
           onTap: () {
-            // Add onTap logic for Item 2
+            context.goNamed(MyAppRouteConstants.mobileExComScreen);
           },
         ),
         ListTile(
