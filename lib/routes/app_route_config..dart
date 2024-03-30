@@ -5,6 +5,7 @@ import 'package:vts/pages/desktop/admin/admin.dart';
 import 'package:vts/pages/desktop/exCom.dart';
 import 'package:vts/pages/desktop/home.dart';
 import 'package:vts/pages/mobile/about_screen.dart';
+import 'package:vts/pages/mobile/excom_screen.dart';
 import 'package:vts/pages/mobile/home.dart';
 import 'package:vts/pages/mobile/special_interest_group.dart';
 import 'package:vts/pages/mobile/student_branch_chapter.dart';
@@ -66,6 +67,13 @@ class MyAppRouter {
       path: "/mobile-sbc",
       pageBuilder: (context, state) {
         return const MaterialPage(child: MobileSBCScreen());
+      },
+    ),
+    GoRoute(
+      name: MyAppRouteConstants.mobileExComScreen,
+      path: "/mobile-excom",
+      pageBuilder: (context, state) {
+        return const MaterialPage(child: MobileExComScreen());
       },
     ),
   ]);
