@@ -125,18 +125,6 @@ class _MobileHomeScreenState extends State<MobileHomeScreen> {
               SizedBox(
                 height: height * 0.03,
               ),
-              Text(
-                "Recent Events: ",
-                style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    fontSize: 20,
-                    color: CustomColors.alertColor),
-                textAlign: TextAlign.start,
-              ),
-              _buildRecentEvents(),
-              SizedBox(
-                height: height * 0.03,
-              ),
               Center(
                 child: Stack(
                   children: [
@@ -199,6 +187,29 @@ class _MobileHomeScreenState extends State<MobileHomeScreen> {
                   ],
                 ),
               ),
+              SizedBox(
+                height: height * 0.03,
+              ),
+              Card(
+                elevation: 2.0,
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(10.0),
+                ),
+                color: CustomColors.buttonColor.withOpacity(.8),
+                child: const Padding(
+                  padding:
+                      EdgeInsets.symmetric(vertical: 4.0, horizontal: 12.0),
+                  child: Text(
+                    'Recent Events',
+                    style: TextStyle(
+                      fontSize: 20,
+                      color: Colors.white,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                ),
+              ),
+              _buildRecentEvents(),
               Center(
                 child: IntrinsicHeight(
                   child: Column(
