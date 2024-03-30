@@ -89,7 +89,7 @@ class _DesktopHomeScreenState extends State<DesktopHomeScreen> {
                 ),
               ),
               SizedBox(
-                height: 20,
+                height: 18,
               ),
               Container(
                   // height: 500,
