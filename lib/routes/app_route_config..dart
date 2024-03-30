@@ -85,12 +85,5 @@ class MyAppRouter {
         return MaterialPage(child: MobileEventScreen());
       },
     ),
-    GoRoute(
-      name: MyAppRouteConstants.mobileContactUsScreen,
-      path: "/mobile-contactus",
-      pageBuilder: (context, state) {
-        return MaterialPage(child: MobileContactUs());
-      },
-    ),
   ]);
 }

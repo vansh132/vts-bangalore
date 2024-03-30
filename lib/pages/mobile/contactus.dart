@@ -25,7 +25,7 @@ class ContactUsBody extends StatefulWidget {
 }
 
 class _ContactUsBodyState extends State<ContactUsBody> {
-  GoogleMapController mapController;
+  late GoogleMapController mapController;
 
   final LatLng _companyLocation = LatLng(40.7128, -74.0060);
 

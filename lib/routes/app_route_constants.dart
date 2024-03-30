@@ -12,5 +12,4 @@ class MyAppRouteConstants {
   static const String mobileSBCScreen = 'mobile-sbc';
   static const String mobileExComScreen = 'mobile-excom';
   static const String mobileEventScreen = 'mobile-events';
-  static const String mobileContactUsScreen = 'mobile-contactus';
 }

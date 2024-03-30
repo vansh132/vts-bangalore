@@ -96,13 +96,6 @@ Widget drawer(BuildContext context) {
             // Add onTap logic for Item 2
           },
         ),
-        ListTile(
-          leading: Icon(Icons.contact_page),
-          title: const Text('Contact Us'),
-          onTap: () {
-            // Add onTap logic for Item 2
-          },
-        ),
       ],
     ),
   );
