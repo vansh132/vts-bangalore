@@ -1,5 +1,9 @@
+// ignore_for_file: deprecated_member_use
+
 import 'dart:js' as js;
 
+import 'package:animated_text_kit/animated_text_kit.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:vts/constants/colors.dart';
@@ -16,6 +20,7 @@ class DesktopHomeScreen extends StatefulWidget {
 
 class _DesktopHomeScreenState extends State<DesktopHomeScreen> {
   bool _isHovering = false;
+  bool _isHoveredTile = false;
   @override
   Widget build(BuildContext context) {
     final width = MediaQuery.of(context).size.width;
@@ -38,7 +43,8 @@ class _DesktopHomeScreenState extends State<DesktopHomeScreen> {
               const SizedBox(
                 height: 16,
               ),
-              const CustomImageSlider(),
+              // const CustomImageSlider(),
+              joinCommunity(_isHoveredTile),
               Container(
                 height: 500,
                 // color: CustomColors.lightGrey,
@@ -141,6 +147,395 @@ class _DesktopHomeScreenState extends State<DesktopHomeScreen> {
                         textAlign: TextAlign.justify,
                         'Be the association of reference for VT professionals’ needs in the areas of life-long learning, standards creation, dissemination of new technologies and networking.',
                         style: TextStyle(fontSize: 16.0),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+
+  Widget joinCommunity(bool _isHovered) {
+    return Container(
+      margin: EdgeInsets.symmetric(horizontal: 48),
+      child: IntrinsicHeight(
+        child: Row(
+          // mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            Expanded(
+              child: Card(
+                margin: const EdgeInsets.all(16.0),
+                elevation: 4.0,
+                child: Padding(
+                  padding: const EdgeInsets.all(16.0),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      Container(
+                        width: 150.0,
+                        height: 150.0,
+                        decoration: const BoxDecoration(
+                          shape: BoxShape.circle,
+                          image: DecorationImage(
+                            image: AssetImage("assets/images/groups.jpg"),
+                            fit: BoxFit.cover,
+                          ),
+                        ),
+                      ),
+                      const SizedBox(height: 16.0),
+                      const Text(
+                        'Special Interest Group',
+                        style: TextStyle(
+                          fontSize: 18.0,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                      const SizedBox(height: 8.0),
+                      Text(
+                        textAlign: TextAlign.center,
+                        'Unlocking Industry Innovation: Together with IEEE Experts, We Identify Challenges & Forge Solutions',
+                        style: Theme.of(context).textTheme.bodyMedium!.copyWith(
+                              fontSize: 16,
+                              fontWeight: FontWeight.w600,
+                              color: CustomColors.primaryDarkColor,
+                            ),
+                      ),
+                      SizedBox(
+                        height: 12,
+                      ),
+                      Divider(
+                        indent: 36,
+                        endIndent: 36,
+                        height: 2,
+                        color: CustomColors.lightGrey.withOpacity(0.7),
+                      ),
+                      SizedBox(
+                        height: 12,
+                      ),
+                      const Text(
+                        textAlign: TextAlign.justify,
+                        "Welcome to the Special Interest Group (SIG) section of the VTS Bangalore Industry Hub! At VTS Chapter, we are proud to lead the charge in fostering collaboration between industry professionals and IEEE experts. In 2023, we launched our pioneering SIG initiative, starting with SIG VTS TVS Motor and SIG VTS Harman International. These SIGs are dedicated to facilitating collaborative efforts aimed at identifying and addressing the key challenges and innovations within the industry. Additionally, our SIGs serve as platforms for knowledge exchange, networking, and skill development, offering members invaluable opportunities to stay at the forefront of industry trends. Join us as we strive to encourage greater participation and interest from industry professionals, driving forward impactful advancements in technology and engineering.",
+                        style: TextStyle(fontSize: 16.0),
+                      ),
+                      SizedBox(
+                        height: 12,
+                      ),
+                      ElevatedButton.icon(
+                        icon: const Icon(Icons.lightbulb),
+                        onPressed: () {
+                          js.context.callMethod('open', [
+                            'https://www.tvsiql.com/professional-chapters/'
+                          ]);
+                        },
+                        label: const Text(
+                          "Explore SIG Initiatives",
+                          style: TextStyle(
+                            fontSize: 16,
+                            color: Colors.white,
+                          ),
+                        ),
+                        style: ButtonStyle(
+                          backgroundColor: MaterialStateProperty.all<Color>(
+                              CustomColors
+                                  .buttonColor), // Set the background color
+                          padding:
+                              MaterialStateProperty.all<EdgeInsetsGeometry>(
+                                  const EdgeInsets.symmetric(
+                                      vertical: 16,
+                                      horizontal: 24)), // Set padding
+                          shape:
+                              MaterialStateProperty.all<RoundedRectangleBorder>(
+                            RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(
+                                  24.0), // Set rounded corners
+                            ),
+                          ),
+                          elevation: MaterialStateProperty.all<double>(
+                              3), // Set elevation
+                          textStyle: MaterialStateProperty.all<TextStyle>(
+                              const TextStyle(
+                                  fontSize: 16,
+                                  color: Colors.white)), // Set text style
+                          iconColor: MaterialStateProperty.all<Color>(
+                              Colors.white), // Set icon color
+                        ),
+                      ),
+                      SizedBox(
+                        height: 6,
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+            ),
+            Expanded(
+              child: Card(
+                margin: const EdgeInsets.all(16.0),
+                elevation: 4.0,
+                child: Padding(
+                  padding: const EdgeInsets.all(16.0),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      Container(
+                        width: 150.0,
+                        height: 150.0,
+                        decoration: const BoxDecoration(
+                          shape: BoxShape.circle,
+                          image: DecorationImage(
+                            image: AssetImage("assets/images/groups.jpg"),
+                            fit: BoxFit.cover,
+                          ),
+                        ),
+                      ),
+                      const SizedBox(height: 16.0),
+                      const Text(
+                        'Student Branch Chapter',
+                        style: TextStyle(
+                          fontSize: 18.0,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                      const SizedBox(height: 8.0),
+                      Text(
+                        textAlign: TextAlign.center,
+                        'Welcome to our Student Branch Chapter (SBC) initiative!',
+                        style: Theme.of(context).textTheme.bodyMedium!.copyWith(
+                              fontSize: 16,
+                              fontWeight: FontWeight.w600,
+                              color: CustomColors.primaryDarkColor,
+                            ),
+                      ),
+                      SizedBox(
+                        height: 12,
+                      ),
+                      Divider(
+                        indent: 36,
+                        endIndent: 36,
+                        height: 2,
+                        color: CustomColors.lightGrey.withOpacity(0.7),
+                      ),
+                      SizedBox(
+                        height: 12,
+                      ),
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            "Two student branch chapters (SBC)",
+                            style: TextStyle(
+                              fontSize: 16,
+                            ),
+                          ),
+                          MouseRegion(
+                            onEnter: (_) {
+                              setState(() {
+                                _isHovered = true;
+                              });
+                            },
+                            onExit: (_) {
+                              setState(() {
+                                _isHovered = false;
+                              });
+                            },
+                            child: AnimatedContainer(
+                              duration: Duration(milliseconds: 300),
+                              decoration: BoxDecoration(
+                                color: _isHovered
+                                    ? Colors.blue.withOpacity(0.2)
+                                    : Colors.transparent,
+                                borderRadius: BorderRadius.circular(10),
+                              ),
+                              child: ListTile(
+                                leading: Icon(Icons.school),
+                                title: Text(
+                                  "Atria Institute of Technology",
+                                  style: Theme.of(context)
+                                      .textTheme
+                                      .bodyMedium!
+                                      .copyWith(
+                                        fontWeight: FontWeight.bold,
+                                        fontSize: 18,
+                                        color: _isHovered
+                                            ? Colors.blue
+                                            : Colors.black,
+                                      ),
+                                ),
+                                trailing: Text(
+                                  "Mentor: Dr. Ramesh",
+                                  style: Theme.of(context)
+                                      .textTheme
+                                      .titleSmall!
+                                      .copyWith(
+                                        fontSize: 14,
+                                        fontWeight: FontWeight.w700,
+                                        color: _isHovered
+                                            ? Colors.blue
+                                            : CustomColors.darkGrey,
+                                      ),
+                                ),
+                                onTap: () {
+                                  js.context.callMethod('open',
+                                      ['https://www.ieeevtsbangalore.in/']);
+                                },
+                              ),
+                            ),
+                          ),
+                          MouseRegion(
+                            onEnter: (_) {
+                              setState(() {
+                                _isHovered = true;
+                              });
+                            },
+                            onExit: (_) {
+                              setState(() {
+                                _isHovered = false;
+                              });
+                            },
+                            child: AnimatedContainer(
+                              duration: Duration(milliseconds: 300),
+                              decoration: BoxDecoration(
+                                color: _isHovered
+                                    ? Colors.blue.withOpacity(0.2)
+                                    : Colors.transparent,
+                                borderRadius: BorderRadius.circular(10),
+                              ),
+                              child: ListTile(
+                                leading: Icon(Icons.school),
+                                title: Text(
+                                  "Reva University",
+                                  style: Theme.of(context)
+                                      .textTheme
+                                      .bodyMedium!
+                                      .copyWith(
+                                        fontWeight: FontWeight.bold,
+                                        fontSize: 18,
+                                        color: _isHovered
+                                            ? Colors.blue
+                                            : Colors.black,
+                                      ),
+                                ),
+                                trailing: Text(
+                                  "Mentor: Dr. Nayana",
+                                  style: Theme.of(context)
+                                      .textTheme
+                                      .titleSmall!
+                                      .copyWith(
+                                        fontSize: 14,
+                                        fontWeight: FontWeight.w700,
+                                        color: _isHovered
+                                            ? Colors.blue
+                                            : CustomColors.darkGrey,
+                                      ),
+                                ),
+                                onTap: () {
+                                  js.context.callMethod('open',
+                                      ['https://edu.ieee.org/in-reva/']);
+                                },
+                              ),
+                            ),
+                          ),
+                          Text(
+                            "We're eager to expand, so if you're a college student or faculty member interested in establishing a VTS SBC, reach out to our Executive Committee for guidance and support. Let's collaborate to cultivate innovation and leadership in technology!",
+                            style: TextStyle(
+                              fontSize: 16,
+                            ),
+                          ),
+                        ],
+                      ),
+                      SizedBox(
+                        height: 12,
+                      ),
+                      Row(
+                        children: [
+                          ElevatedButton.icon(
+                            icon: const Icon(Icons.lightbulb),
+                            onPressed: () {
+                              js.context.callMethod('open', [
+                                'https://www.tvsiql.com/professional-chapters/'
+                              ]);
+                            },
+                            label: const Text(
+                              "Explore SIG Initiatives",
+                              style: TextStyle(
+                                fontSize: 16,
+                                color: Colors.white,
+                              ),
+                            ),
+                            style: ButtonStyle(
+                              backgroundColor: MaterialStateProperty.all<Color>(
+                                  CustomColors
+                                      .buttonColor), // Set the background color
+                              padding:
+                                  MaterialStateProperty.all<EdgeInsetsGeometry>(
+                                      const EdgeInsets.symmetric(
+                                          vertical: 16,
+                                          horizontal: 24)), // Set padding
+                              shape: MaterialStateProperty.all<
+                                  RoundedRectangleBorder>(
+                                RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(
+                                      24.0), // Set rounded corners
+                                ),
+                              ),
+                              elevation: MaterialStateProperty.all<double>(
+                                  3), // Set elevation
+                              textStyle: MaterialStateProperty.all<TextStyle>(
+                                  const TextStyle(
+                                      fontSize: 16,
+                                      color: Colors.white)), // Set text style
+                              iconColor: MaterialStateProperty.all<Color>(
+                                  Colors.white), // Set icon color
+                            ),
+                          ),
+                          ElevatedButton.icon(
+                            icon: const Icon(Icons.lightbulb),
+                            onPressed: () {
+                              js.context.callMethod('open', [
+                                'https://www.tvsiql.com/professional-chapters/'
+                              ]);
+                            },
+                            label: const Text(
+                              "ExCom Members SIG Initiatives",
+                              style: TextStyle(
+                                fontSize: 16,
+                                color: Colors.white,
+                              ),
+                            ),
+                            style: ButtonStyle(
+                              backgroundColor: MaterialStateProperty.all<Color>(
+                                  CustomColors
+                                      .buttonColor), // Set the background color
+                              padding:
+                                  MaterialStateProperty.all<EdgeInsetsGeometry>(
+                                      const EdgeInsets.symmetric(
+                                          vertical: 16,
+                                          horizontal: 24)), // Set padding
+                              shape: MaterialStateProperty.all<
+                                  RoundedRectangleBorder>(
+                                RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(
+                                      24.0), // Set rounded corners
+                                ),
+                              ),
+                              elevation: MaterialStateProperty.all<double>(
+                                  3), // Set elevation
+                              textStyle: MaterialStateProperty.all<TextStyle>(
+                                  const TextStyle(
+                                      fontSize: 16,
+                                      color: Colors.white)), // Set text style
+                              iconColor: MaterialStateProperty.all<Color>(
+                                  Colors.white), // Set icon color
+                            ),
+                          ),
+                        ],
+                      ),
+                      SizedBox(
+                        height: 6,
                       ),
                     ],
                   ),
