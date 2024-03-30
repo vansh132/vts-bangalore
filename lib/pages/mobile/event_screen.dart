@@ -21,7 +21,7 @@ class MobileEventScreen extends StatelessWidget {
       link: 'https://vtsociety.org/',
     ),
     EventItem(
-      title: 'ICVTTS CONFERENCE',
+      title: 'ICVTTS CONFERENCE - Day2',
       description:
           'Join us for a transformative conference experience where industry leaders and innovators come together to share insights, explore trends, and inspire change. With engaging sessions, networking opportunities, and thought-provoking discussions, our conference promises to expand your horizons and empower you with knowledge to thrive in an ever-evolving world. Don\'t miss this chance to connect, learn, and grow with like-minded professionals. See you there!',
       image:
@@ -29,7 +29,7 @@ class MobileEventScreen extends StatelessWidget {
       link: 'https://www.ieeevtsbangalore.in/',
     ),
     EventItem(
-      title: 'Conference',
+      title: 'Conference - Day2',
       description: 'Conference Event',
       image:
           'https://images.unsplash.com/photo-1515187029135-18ee286d815b?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Y29uZmVyZW5jZSUyMGlhbWdlfGVufDB8fDB8fHww',
@@ -44,7 +44,77 @@ class MobileEventScreen extends StatelessWidget {
       link: 'https://www.ieeevtsbangalore.in/',
     ),
     EventItem(
-      title: 'Conference',
+      title: 'Conference - Day3',
+      description: 'Conference Event',
+      image:
+          'https://images.unsplash.com/photo-1515187029135-18ee286d815b?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Y29uZmVyZW5jZSUyMGlhbWdlfGVufDB8fDB8fHww',
+      link: 'https://vtsociety.org/',
+    ),
+    EventItem(
+      title: 'Conference - Day4',
+      description: 'Conference Event',
+      image:
+          'https://images.unsplash.com/photo-1515187029135-18ee286d815b?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Y29uZmVyZW5jZSUyMGlhbWdlfGVufDB8fDB8fHww',
+      link: 'https://vtsociety.org/',
+    ),
+    EventItem(
+      title: 'Conference - Day5',
+      description: 'Conference Event',
+      image:
+          'https://images.unsplash.com/photo-1515187029135-18ee286d815b?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Y29uZmVyZW5jZSUyMGlhbWdlfGVufDB8fDB8fHww',
+      link: 'https://vtsociety.org/',
+    ),
+    EventItem(
+      title: 'Conference - Day4',
+      description: 'Conference Event',
+      image:
+          'https://images.unsplash.com/photo-1515187029135-18ee286d815b?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Y29uZmVyZW5jZSUyMGlhbWdlfGVufDB8fDB8fHww',
+      link: 'https://vtsociety.org/',
+    ),
+    EventItem(
+      title: 'Conference - Day5',
+      description: 'Conference Event',
+      image:
+          'https://images.unsplash.com/photo-1515187029135-18ee286d815b?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Y29uZmVyZW5jZSUyMGlhbWdlfGVufDB8fDB8fHww',
+      link: 'https://vtsociety.org/',
+    ),
+    EventItem(
+      title: 'Conference - Day4',
+      description: 'Conference Event',
+      image:
+          'https://images.unsplash.com/photo-1515187029135-18ee286d815b?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Y29uZmVyZW5jZSUyMGlhbWdlfGVufDB8fDB8fHww',
+      link: 'https://vtsociety.org/',
+    ),
+    EventItem(
+      title: 'Conference - Day5',
+      description: 'Conference Event',
+      image:
+          'https://images.unsplash.com/photo-1515187029135-18ee286d815b?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Y29uZmVyZW5jZSUyMGlhbWdlfGVufDB8fDB8fHww',
+      link: 'https://vtsociety.org/',
+    ),
+    EventItem(
+      title: 'Conference - Day4',
+      description: 'Conference Event',
+      image:
+          'https://images.unsplash.com/photo-1515187029135-18ee286d815b?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Y29uZmVyZW5jZSUyMGlhbWdlfGVufDB8fDB8fHww',
+      link: 'https://vtsociety.org/',
+    ),
+    EventItem(
+      title: 'Conference - Day5',
+      description: 'Conference Event',
+      image:
+          'https://images.unsplash.com/photo-1515187029135-18ee286d815b?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Y29uZmVyZW5jZSUyMGlhbWdlfGVufDB8fDB8fHww',
+      link: 'https://vtsociety.org/',
+    ),
+    EventItem(
+      title: 'Conference - Day4',
+      description: 'Conference Event',
+      image:
+          'https://images.unsplash.com/photo-1515187029135-18ee286d815b?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Y29uZmVyZW5jZSUyMGlhbWdlfGVufDB8fDB8fHww',
+      link: 'https://vtsociety.org/',
+    ),
+    EventItem(
+      title: 'Conference - Day5',
       description: 'Conference Event',
       image:
           'https://images.unsplash.com/photo-1515187029135-18ee286d815b?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Y29uZmVyZW5jZSUyMGlhbWdlfGVufDB8fDB8fHww',
