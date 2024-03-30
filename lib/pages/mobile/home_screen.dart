@@ -7,6 +7,7 @@ import 'package:url_launcher/url_launcher.dart';
 import 'package:vts/constants/colors.dart';
 import 'package:vts/pages/desktop/widgets/footer.dart';
 import 'package:vts/pages/mobile/appbar.dart';
+import 'package:vts/pages/mobile/event_screen.dart';
 
 class MobileHomeScreen extends StatefulWidget {
   const MobileHomeScreen({Key? key}) : super(key: key);
@@ -132,6 +133,7 @@ class _MobileHomeScreenState extends State<MobileHomeScreen> {
                     color: CustomColors.alertColor),
                 textAlign: TextAlign.start,
               ),
+              _buildRecentEvents(),
               SizedBox(
                 height: height * 0.03,
               ),
@@ -417,4 +419,55 @@ class _MobileHomeScreenState extends State<MobileHomeScreen> {
       ),
     );
   }
+}
+
+Widget _buildRecentEvents() {
+  final List<EventItem> eventItems = MobileEventScreen().eventItems;
+  final List<EventItem> shuffledEvents = List.from(eventItems)..shuffle();
+  final List<EventItem> recentEvents = shuffledEvents.take(6).toList();
+
+  return SingleChildScrollView(
+    scrollDirection: Axis.horizontal,
+    child: Row(
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      children: recentEvents.map((event) {
+        return Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: GestureDetector(
+            onTap: () {
+              js.context.callMethod('open', [event.link]);
+            },
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                Container(
+                  width: 80,
+                  height: 80,
+                  decoration: BoxDecoration(
+                    shape: BoxShape.circle,
+                    border: Border.all(
+                      color: Colors.black,
+                      width: 2,
+                    ),
+                    image: DecorationImage(
+                      image: NetworkImage(event.image),
+                      fit: BoxFit.cover,
+                    ),
+                  ),
+                ),
+                SizedBox(height: 8),
+                Text(
+                  event.title,
+                  textAlign: TextAlign.center,
+                  style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+              ],
+            ),
+          ),
+        );
+      }).toList(),
+    ),
+  );
 }

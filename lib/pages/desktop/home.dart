@@ -10,6 +10,7 @@ import 'package:vts/constants/colors.dart';
 import 'package:vts/pages/desktop/widgets/custom_image_slider.dart';
 import 'package:vts/pages/desktop/widgets/footer.dart';
 import 'package:vts/pages/desktop/widgets/nav_bar.dart';
+import 'package:vts/pages/mobile/event_screen.dart';
 
 class DesktopHomeScreen extends StatefulWidget {
   const DesktopHomeScreen({super.key});
@@ -47,12 +48,9 @@ class _DesktopHomeScreenState extends State<DesktopHomeScreen> {
               ieeeVTS(width, _isHovering),
               joinCommunity(_isHoveredTile),
               Container(
-                height: 500,
-                // color: CustomColors.lightGrey,
-                child: const Center(
-                  child: Text("Recent Events"),
-                ),
-              ),
+                  // height: 500,
+                  // color: CustomColors.lightGrey,
+                  child: _buildRecentEvents()),
               mission(),
               fieldOfInterest(width, _isHovering),
               icvttsConference(width, _isHovering),
@@ -992,4 +990,55 @@ class _DesktopHomeScreenState extends State<DesktopHomeScreen> {
       ],
     );
   }
+}
+
+Widget _buildRecentEvents() {
+  final List<EventItem> eventItems = MobileEventScreen().eventItems;
+  final List<EventItem> shuffledEvents = List.from(eventItems)..shuffle();
+  final List<EventItem> recentEvents = shuffledEvents.take(8).toList();
+
+  return SingleChildScrollView(
+    scrollDirection: Axis.horizontal,
+    child: Row(
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      children: recentEvents.map((event) {
+        return Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: GestureDetector(
+            onTap: () {
+              js.context.callMethod('open', [event.link]);
+            },
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                Container(
+                  width: 80,
+                  height: 80,
+                  decoration: BoxDecoration(
+                    shape: BoxShape.circle,
+                    border: Border.all(
+                      color: Colors.black,
+                      width: 2,
+                    ),
+                    image: DecorationImage(
+                      image: NetworkImage(event.image),
+                      fit: BoxFit.cover,
+                    ),
+                  ),
+                ),
+                SizedBox(height: 8),
+                Text(
+                  event.title,
+                  textAlign: TextAlign.center,
+                  style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+              ],
+            ),
+          ),
+        );
+      }).toList(),
+    ),
+  );
 }
